@@ -1,5 +1,5 @@
 import React from 'react'
-import Navbar from '../Common/Navbar/Navbar'
+import Navbar from '../common/navbar/Navbar'
 const home = () => {
   return (
     <div>
