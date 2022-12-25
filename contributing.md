@@ -1,4 +1,4 @@
-### Step to setup the project from GitHub to your local system.
+### 👉Step to setup the project from GitHub to your local system.
 
 <h3>Setting Project on your Local System :- </h3><br>
 <ul>
@@ -21,7 +21,7 @@
  <li>Here is an example in VS Code. </li><br>
 </ul>
 
-### 5. Now Make necessary changes and commit them , lets say you have to add your name in readme , you already set up the project in local system . Now before starting your work always rembember to pull latest change from the main Repo.
+### Now Make necessary changes and commit them , lets say you have to add your name in readme , you already set up the project in local system . Now before starting your work always rembember to pull latest change from the main Repo.
 
 <ul>
 
@@ -56,7 +56,7 @@ git push origin new_branch_name
 
 </ul>
   
-### 6. Make the Pull Request
+### Make the Pull Request
 <ul>
 <li>when you push the changes you will notice a new branch will be created on GitHub and there will be a green button for creating pull request. Click on it.</li>
 <br>
