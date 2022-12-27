@@ -19,3 +19,5 @@ See [`contributing.md`](./contributing.md) for ways to get started.
 ## Feedback
 
 If you have any feedback, please reach out to us at biswajit.basanti@gmail.com
+
+HIT the star for helping 
