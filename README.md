@@ -14,7 +14,7 @@ Visit At <a href="https://e-dukan-neon.vercel.app/" target="_blank">LIVE</a>
 
 Contributions are always welcome!
 
-See [`contributing.md`](./CONTRIBUTING.md) for ways to get started.
+See [`contributing.md`](./contributing.md) for ways to get started.
 
 ## Feedback
 
