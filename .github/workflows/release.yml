@@ -16,7 +16,6 @@ jobs:
         with:
           node-version: "18.x"
       - run: npm ci
-      - run: npm test
       - name: Release
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
