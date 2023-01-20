@@ -1,10 +1,43 @@
 import React from 'react'
 import '../Style/css/main.css'
+import logo from '../Assets/nav_logo.jpg';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faSearch } from '@fortawesome/free-solid-svg-icons';
+import { faUser } from '@fortawesome/free-solid-svg-icons';
+import { faCartShopping } from '@fortawesome/free-solid-svg-icons';
+import { faBars } from '@fortawesome/free-solid-svg-icons';
 
 const Navbar = () => {
   return (
     <div className='navbar'>
-        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Suscipit nobis natus laudantium non, autem eveniet ipsum doloribus fugit sequi? Minus quam quo incidunt maxime alias dolores odit vero laudantium eligendi accusamus, veniam perferendis est debitis a hic dicta voluptates? Dolores ea reiciendis alias provident veritatis porro quidem quam repellendus ut doloribus. Impedit eaque quidem pariatur dolores, architecto minima. Blanditiis fuga natus minima nesciunt ea, expedita, ducimus debitis officiis, repudiandae itaque necessitatibus a amet sequi nihil nulla eum asperiores excepturi unde facere tempora voluptates in eveniet sint libero. Cum fuga aut ipsa quisquam reiciendis eaque fugit. Saepe alias eveniet illum quos?
+      <div className="nav_details">
+        <div className="nav_logo">
+          <img src={logo} alt="sastastore logo" />
+          <FontAwesomeIcon icon={faBars} className='hamburger'/>
+          <div className="title">SastaStore</div>
+        </div>
+        <div className="nav_acc">
+          <div className="profile">
+            <FontAwesomeIcon icon={faUser} />
+            <span className="text">User</span>
+          </div>
+          <div className="profile">
+            Seller
+          </div>
+          <div className="profile">
+            <FontAwesomeIcon icon={faCartShopping} />
+            <span className="text">User</span>
+          </div>
+        </div>
+      </div>
+
+      <div className="ts">
+        <div className="search">
+          <FontAwesomeIcon icon={faSearch} className='faSearch'></FontAwesomeIcon>
+          <input type="text" name="" id="" />
+        </div>
+      </div>
+
     </div>
   )
 }

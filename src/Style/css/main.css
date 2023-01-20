@@ -4,5 +4,140 @@
 }
 
 .navbar {
-  background-color: red;
+  background-color: #2b6777;
+  height: 8vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2px 60px;
+  font-size: 17px;
+}
+@media (width <= 768px) {
+  .navbar {
+    padding: 0 25px;
+  }
+}
+@media (width <= 480px) {
+  .navbar {
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 10px;
+    padding-bottom: 5px;
+    height: auto;
+    gap: 5px;
+  }
+}
+.navbar .nav_details {
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  display: flex;
+}
+.navbar .nav_details .nav_logo {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+}
+@media (width <= 480px) {
+  .navbar .nav_details .nav_logo {
+    gap: 15px;
+  }
+}
+.navbar .nav_details .nav_logo .title {
+  font-size: 25px;
+  font-weight: bold;
+  color: white;
+}
+.navbar .nav_details .nav_logo img {
+  height: 7vh;
+  width: auto;
+}
+@media (width <= 480px) {
+  .navbar .nav_details .nav_logo img {
+    display: none;
+  }
+}
+.navbar .nav_details .nav_logo .hamburger {
+  display: none;
+  color: white;
+}
+@media (width <= 480px) {
+  .navbar .nav_details .nav_logo .hamburger {
+    display: initial;
+    font-size: 20px;
+  }
+}
+.navbar .ts {
+  gap: 60px;
+  position: absolute;
+  top: 15px;
+}
+@media (width <= 768px) {
+  .navbar .ts {
+    gap: 35px;
+    top: 10px;
+  }
+}
+@media (width <= 480px) {
+  .navbar .ts {
+    position: initial;
+  }
+}
+.navbar .ts .faSearch {
+  font-size: 15px;
+}
+.navbar .search {
+  width: 40vw;
+  background-color: white;
+  height: 4vh;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  padding: 0 10px;
+}
+@media (width <= 768px) {
+  .navbar .search {
+    width: 30vw;
+  }
+}
+@media (width <= 480px) {
+  .navbar .search {
+    top: 50px;
+    width: 91vw;
+  }
+}
+.navbar .search input[type=text] {
+  font-size: 16px;
+  outline: none;
+  border: none;
+  height: 80%;
+  width: 100%;
+  padding-left: 10px;
+}
+.navbar .nav_acc {
+  display: flex;
+  gap: 55px;
+  color: white;
+}
+@media (width <= 768px) {
+  .navbar .nav_acc {
+    gap: 20px;
+  }
+}
+@media (width <= 480px) {
+  .navbar .nav_acc {
+    position: relative;
+    gap: 15px;
+  }
+}
+.navbar .nav_acc .profile {
+  display: flex;
+  gap: 5px;
+  cursor: pointer;
+}
+@media (width <= 480px) {
+  .navbar .nav_acc .profile .text {
+    display: none;
+  }
 }/*# sourceMappingURL=main.css.map */
