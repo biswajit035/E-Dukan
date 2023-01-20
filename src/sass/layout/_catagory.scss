@@ -1,0 +1,16 @@
+.cata{
+    // background-color: grey;
+    display: flex;
+    font-size: 20px;
+    padding: 5px 10px;
+    gap: 40px;
+    overflow-x: scroll;
+    &::-webkit-scrollbar {
+        display: none;
+    }
+
+    @include mobile{
+        padding: 8px 10px;
+        font-size: 25px;
+    }
+}

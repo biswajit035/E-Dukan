@@ -9,7 +9,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
   padding: 2px 60px;
   font-size: 17px;
 }
@@ -76,7 +76,7 @@
 @media (width <= 768px) {
   .navbar .ts {
     gap: 35px;
-    top: 10px;
+    top: 15px;
   }
 }
 @media (width <= 480px) {
@@ -119,6 +119,7 @@
   display: flex;
   gap: 55px;
   color: white;
+  align-items: center;
 }
 @media (width <= 768px) {
   .navbar .nav_acc {
@@ -135,9 +136,80 @@
   display: flex;
   gap: 5px;
   cursor: pointer;
+  align-items: center;
 }
 @media (width <= 480px) {
   .navbar .nav_acc .profile .text {
     display: none;
   }
+}
+
+.cata {
+  display: flex;
+  font-size: 20px;
+  padding: 5px 10px;
+  gap: 40px;
+  overflow-x: scroll;
+}
+.cata::-webkit-scrollbar {
+  display: none;
+}
+@media (width <= 480px) {
+  .cata {
+    padding: 8px 10px;
+    font-size: 25px;
+  }
+}
+
+@media (width >= 768px) {
+  .carousel .carousel-item {
+    height: 400px;
+  }
+  .carousel-item img {
+    min-height: 400px;
+  }
+}
+.omg .omg_logo {
+  top: 20px;
+  display: flex;
+  justify-content: center;
+}
+@media (width <= 480px) {
+  .omg .omg_logo img {
+    height: 40px;
+  }
+}
+.omg .omg_title {
+  display: flex;
+  justify-content: center;
+  font-size: 25px;
+  color: #3d2e8a;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+@media (width <= 480px) {
+  .omg .omg_title {
+    font-size: 12px;
+  }
+}
+.omg .omg_products {
+  display: flex;
+  gap: 10px;
+  overflow-x: scroll;
+  padding: 15px 10px;
+}
+.omg .omg_products::-webkit-scrollbar {
+  display: none;
+}
+.omg .omg_products .card {
+  min-width: 15vw;
+  border-radius: 10px;
+}
+@media (width <= 480px) {
+  .omg .omg_products .card {
+    min-width: 40vw;
+  }
+}
+.omg .omg_products .container {
+  padding: 2px 16px;
 }/*# sourceMappingURL=main.css.map */
