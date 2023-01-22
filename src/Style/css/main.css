@@ -13,7 +13,7 @@
   padding: 2px 60px;
   font-size: 17px;
 }
-@media (width <= 768px) {
+@media (480px <= width <= 768px) {
   .navbar {
     padding: 0 25px;
   }
@@ -73,7 +73,7 @@
   position: absolute;
   top: 15px;
 }
-@media (width <= 768px) {
+@media (480px <= width <= 768px) {
   .navbar .ts {
     gap: 35px;
     top: 15px;
@@ -96,7 +96,7 @@
   align-items: center;
   padding: 0 10px;
 }
-@media (width <= 768px) {
+@media (480px <= width <= 768px) {
   .navbar .search {
     width: 30vw;
   }
@@ -121,7 +121,7 @@
   color: white;
   align-items: center;
 }
-@media (width <= 768px) {
+@media (480px <= width <= 768px) {
   .navbar .nav_acc {
     gap: 20px;
   }
@@ -137,13 +137,18 @@
   gap: 5px;
   cursor: pointer;
   align-items: center;
+  color: white;
+  text-decoration: none;
 }
-.navbar .nav_acc .profile .text {
+.navbar .nav_acc .profile:hover {
+  color: yellow;
+}
+.navbar .nav_acc .profile .span {
   text-decoration: none;
   color: white;
 }
 @media (width <= 480px) {
-  .navbar .nav_acc .profile .text {
+  .navbar .nav_acc .profile .span {
     display: none;
   }
 }
@@ -221,7 +226,7 @@
     min-width: 40vw;
   }
 }
-@media (width <= 768px) {
+@media (480px <= width <= 768px) {
   .omg .omg_products .card {
     min-width: 40vw;
   }
@@ -242,7 +247,7 @@
     font-size: 12px;
   }
 }
-@media (width <= 768px) {
+@media (480px <= width <= 768px) {
   .omg .omg_products .container .dis {
     font-size: 12px;
   }
@@ -296,7 +301,7 @@
     min-width: 40vw;
   }
 }
-@media (width <= 768px) {
+@media (480px <= width <= 768px) {
   .food-main .food_products .card {
     min-width: 40vw;
   }
@@ -318,7 +323,7 @@
     font-size: 12px;
   }
 }
-@media (width <= 768px) {
+@media (480px <= width <= 768px) {
   .food-main .food_products .container .dis {
     font-size: 12px;
   }
@@ -369,7 +374,7 @@
     min-width: 40vw;
   }
 }
-@media (width <= 768px) {
+@media (480px <= width <= 768px) {
   .ele-main .ele_products .card {
     min-width: 40vw;
   }
@@ -391,7 +396,7 @@
     font-size: 12px;
   }
 }
-@media (width <= 768px) {
+@media (480px <= width <= 768px) {
   .ele-main .ele_products .container .dis {
     font-size: 12px;
   }
@@ -408,9 +413,93 @@
   justify-content: center;
   align-items: center;
 }
+@media (width <= 480px) {
+  .auth {
+    height: 92vh;
+  }
+}
 .auth .container {
-  width: 40%;
-  height: 95%;
-  border: 10px solid black;
+  width: 25vw;
+  height: 75vh;
   border-radius: 10px;
+  box-shadow: 4px 5px 17px 0px rgba(0, 0, 0, 0.75);
+}
+@media (width <= 480px) {
+  .auth .container {
+    width: 80vw;
+    height: 80vh;
+  }
+}
+@media (480px <= width <= 768px) {
+  .auth .container {
+    width: 75vw;
+    height: 85vh;
+  }
+}
+
+.login, .signup {
+  color: #5a5d5a;
+  padding: 10px 20px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.login h1, .signup h1 {
+  padding: 5px 10px;
+  display: flex;
+  justify-content: center;
+  font-weight: bold;
+}
+.login form, .signup form {
+  display: flex;
+  flex-direction: column;
+  padding-top: 30px;
+}
+.login form label, .signup form label {
+  font-weight: bold;
+}
+.login form input[type=email], .login form input[type=password], .login form input[type=text], .signup form input[type=email], .signup form input[type=password], .signup form input[type=text] {
+  border: none;
+  padding-top: 5px;
+  outline: none;
+  border-bottom: 2px solid white;
+}
+.login form input[type=email]:focus, .login form input[type=password]:focus, .login form input[type=text]:focus, .signup form input[type=email]:focus, .signup form input[type=password]:focus, .signup form input[type=text]:focus {
+  border-bottom: 2px solid grey;
+}
+.login form button, .signup form button {
+  border: none;
+  border-radius: 10px;
+  background-color: #5a5d5a;
+  color: white;
+  font-weight: bold;
+  padding: 10px 55px;
+  font-size: 18px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 40px;
+}
+.login form button:hover, .signup form button:hover {
+  background-color: rgb(72, 72, 72);
+}
+@media (width <= 480px) {
+  .login form button, .signup form button {
+    width: 30vw;
+    padding: 5px;
+  }
+}
+.login .createacc, .signup .createacc {
+  color: rgb(107, 107, 255);
+  text-decoration: none;
+  font-weight: bold;
+  margin-top: auto;
+  text-align: center;
+}
+.login .createacc:hover, .signup .createacc:hover {
+  text-decoration: underline;
+}
+@media (width <= 480px) {
+  .login .createacc:hover, .signup .createacc:hover {
+    text-decoration: none;
+  }
 }/*# sourceMappingURL=main.css.map */

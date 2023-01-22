@@ -158,8 +158,16 @@
             gap: 5px;
             cursor: pointer;
             align-items: center;
+            color: white;
+            text-decoration: none;
 
-            .text{
+            
+
+            &:hover{
+                color: yellow;
+            }
+
+            .span{
                 text-decoration: none;
                 color: white;
                 @include mobile{

@@ -18,17 +18,16 @@ const Navbar = () => {
           <div className="title">SastaStore</div>
         </div>
         <div className="nav_acc">
-          <div className="profile">
+          <Link to="/auth" className="profile">
             <FontAwesomeIcon icon={faUser} />
-            {/* <span className="text">User</span> */}
-            <Link to="/auth"  className="text">User</Link>
-          </div>
+            <span className="text">User</span>
+          </Link>
           <div className="profile">
             Seller
           </div>
           <div className="profile">
             <FontAwesomeIcon icon={faCartShopping} />
-            <span className="text">User</span>
+            <span >User</span>
           </div>
         </div>
       </div>

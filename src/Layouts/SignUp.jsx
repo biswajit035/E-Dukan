@@ -3,8 +3,8 @@ import { Link } from 'react-router-dom'
 
 const SignUp = () => {
   return (
-    <div>
-      <h1>SignUp Page</h1>
+    <div className='signup'>
+      <h1>Create Account</h1>
       <form action="#">
       <label htmlFor="fname">First Name:</label>
         <input type="text" id='fname' placeholder='Enter Your First Name' />&nbsp;
@@ -16,7 +16,7 @@ const SignUp = () => {
         <input type="password" id='password' placeholder='Enter Your password' /><br />
         <button type="submit">SignUp</button>
       </form>
-      <Link to="/auth" className="creatacc">Continue to Login</Link>
+      <Link to="/auth" className="createacc">Continue to Login</Link>
     </div>
   )
 }

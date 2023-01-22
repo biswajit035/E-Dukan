@@ -7,12 +7,7 @@ const Auth = () => {
   return (
     <div className='auth'>
       <div className="container">
-        {/* <Login />
-        <SignUp /> */}
-
         <Outlet/>
-
-
       </div>
 
 
