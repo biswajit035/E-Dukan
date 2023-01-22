@@ -419,8 +419,10 @@
   }
 }
 .auth .container {
-  width: 25vw;
-  height: 75vh;
+  width: 35vw;
+  height: -webkit-max-content;
+  height: -moz-max-content;
+  height: max-content;
   border-radius: 10px;
   box-shadow: 4px 5px 17px 0px rgba(0, 0, 0, 0.75);
 }
