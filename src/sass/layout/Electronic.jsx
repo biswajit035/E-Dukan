@@ -1,10 +1,7 @@
 import React from 'react'
-import Image from '../Assets/omg-deal.jpg';
-import Image2 from '../Assets/best-deals/phone1.jpg';
 import { useState, useEffect } from 'react';
 
-export const Omg = () => {
-
+const Electronic = () => {
     const [users, setUser] = useState([]);
 
     const getUser = async () => {
@@ -18,20 +15,18 @@ export const Omg = () => {
     }, []);
 
     return (
-        <div className='omg'>
-            <div className="omg_logo">
-                <img src={Image} alt="" />
-            </div>
-            <span className='omg_title'>Lowest Prices On The Best Brands</span>
+        <div className='ele-main'>
+            <div className="ele_title">Best Of Electronics</div>
 
-            <div className="omg_products">
+            <div className="ele_products">
                 {
                     users.map((currEle) => {
                         return (
                             <div className="card">
                                 <img src={currEle.image} alt="" /><br />
                                 <div class="container">
-                                    <span className='dis'>Up to 29% off</span>
+                                    <div className="pro-name">{currEle.title}</div>
+                                    <div className='dis'>Up to 29% off</div>
                                     <div className='price'>₹{currEle.price}</div>
                                 </div>
                             </div>
@@ -40,8 +35,9 @@ export const Omg = () => {
                     })
                 }
             </div>
-            <div className="all-pro">See All Product</div>
 
         </div>
     )
 }
+
+export default Electronic

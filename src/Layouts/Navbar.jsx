@@ -6,6 +6,7 @@ import { faSearch } from '@fortawesome/free-solid-svg-icons';
 import { faUser } from '@fortawesome/free-solid-svg-icons';
 import { faCartShopping } from '@fortawesome/free-solid-svg-icons';
 import { faBars } from '@fortawesome/free-solid-svg-icons';
+import { Link } from 'react-router-dom';
 
 const Navbar = () => {
   return (
@@ -19,7 +20,8 @@ const Navbar = () => {
         <div className="nav_acc">
           <div className="profile">
             <FontAwesomeIcon icon={faUser} />
-            <span className="text">User</span>
+            {/* <span className="text">User</span> */}
+            <Link to="/auth"  className="text">User</Link>
           </div>
           <div className="profile">
             Seller

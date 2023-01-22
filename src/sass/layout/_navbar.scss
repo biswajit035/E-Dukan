@@ -160,6 +160,8 @@
             align-items: center;
 
             .text{
+                text-decoration: none;
+                color: white;
                 @include mobile{
                     display: none;
                 }

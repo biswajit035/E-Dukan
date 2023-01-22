@@ -1,35 +1,24 @@
-.omg {
-    .omg_logo {
-        top: 20px;
-        display: flex;
-        justify-content: center;
-
-        @include mobile {
-            img {
-                height: 40px;
-            }
-        }
-    }
-
-    .omg_title {
+.food-main {
+    .food_title {
+        // background-color: red;
         display: flex;
         justify-content: center;
         font-size: 25px;
-        color: #3d2e8a;
-        font-weight: 700;
-        text-transform: uppercase;
+        padding-top: 10px;
+        font-weight: bold;
 
         @include mobile {
-            font-size: 12px;
+            font-size: 18px;
         }
     }
 
-    .omg_products {
+    .food_products {
         display: flex;
         gap: 10px;
         overflow-x: auto;
         padding: 5px 10px;
         // width: 100%;
+
 
         &::-webkit-scrollbar {
             display: none;
@@ -38,6 +27,8 @@
         .card {
             min-width: 15vw;
             border-radius: 10px;
+            border-style: none;
+
 
             img {
                 // width: 200px;
@@ -55,7 +46,7 @@
             }
 
 
-            @include tablet{
+            @include tablet {
                 min-width: 40vw;
             }
 
@@ -65,33 +56,31 @@
 
         .container {
             padding: 2px 16px;
+            font-size: 12px;
+            text-align: center;
 
             .dis {
-                background-color: red;
+                // background-color: red;
                 padding: 5px 10px;
                 border-radius: 5px;
                 font-size: 15px;
                 font-weight: bold;
-                color: white;
+                color: rgb(34, 160, 83);
 
-                @include mobile{
+                @include mobile {
                     font-size: 12px;
                 }
-                @include tablet{
+
+                @include tablet {
                     font-size: 12px;
                 }
             }
-            .price{
+
+            .price {
                 padding: 2px 5px;
                 font-weight: 600;
             }
         }
     }
 
-    .all-pro {
-        padding: 5px 20px;
-        font-size: 13px;
-        color: #077588;
-        font-weight: 500;
-    }
 }
