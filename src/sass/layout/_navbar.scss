@@ -1,0 +1,180 @@
+@import '../abstracts/mixin';
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+
+
+
+
+.navbar {
+    background-color: #2b6777;
+    height: 8vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2px 60px;
+    font-size: 17px;
+
+    @include tablet {
+        padding: 0 25px;
+        // height: auto;
+    }
+
+    @include mobile {
+        padding-left: 10px;
+        padding-right: 10px;
+        padding-top: 10px;
+        padding-bottom: 5px;
+        height: auto;
+        gap: 5px;
+    }
+
+    .nav_details{
+        width: 100%;
+        justify-content: space-between;
+        align-items: center;
+        display: flex;
+
+        .nav_logo {
+                display: flex;
+                align-items: center;
+                gap: 25px;
+
+                @include mobile{
+                    gap: 15px;
+                }
+        
+                .title {
+                    font-size: 25px;
+                    font-weight: bold;
+                    color: white;
+                }
+        
+                img {
+                    height: 7vh;
+                    width: auto;
+
+                    @include mobile{
+                        display: none;
+                    }
+                }
+
+                .hamburger{
+                    display: none;
+                    color: white;
+
+                    @include mobile{
+                        display: initial;
+                        font-size: 20px;
+                    }
+                }
+            }
+    }
+
+    
+
+
+    .ts {
+        // display: flex;
+        // align-items: center;
+            // display: none;
+        gap: 60px;
+        position: absolute;
+        top: 15px;
+
+        @include tablet {
+            gap: 35px;
+            top: 15px;
+        }
+
+        @include mobile {
+            position: initial;
+        }
+
+
+
+
+        .faSearch {
+            font-size: 15px;
+        }
+
+    }
+
+    .search {
+        width: 40vw;
+        background-color: white;
+        height: 4vh;
+        border-radius: 5px;
+        display: flex;
+        align-items: center;
+        padding: 0 10px;
+
+        @include tablet {
+            width: 30vw;
+        }
+
+        @include mobile {
+            // position: absolute;
+            top: 50px;
+            width: 91vw;
+        }
+
+        input[type=text] {
+            // background-color: aqua;
+            font-size: 16px;
+            outline: none;
+            border: none;
+            height: 80%;
+            width: 100%;
+            padding-left: 10px;
+        }
+    }
+
+
+    .nav_acc {
+        display: flex;
+        gap: 55px;
+        color: white;
+        // justify-content: center;
+        align-items: center;
+
+
+        @include tablet {
+            gap: 20px;
+        }
+
+        @include mobile {
+            position: relative;
+            gap: 15px;
+        }
+
+
+        .profile {
+            display: flex;
+            gap: 5px;
+            cursor: pointer;
+            align-items: center;
+            color: white;
+            text-decoration: none;
+
+            
+
+            &:hover{
+                color: yellow;
+            }
+
+            .span{
+                text-decoration: none;
+                color: white;
+                @include mobile{
+                    display: none;
+                }
+            }
+
+        }
+    }
+}

@@ -1,0 +1,9 @@
+@media(width>=768px) {
+    .carousel .carousel-item {
+        height: 400px;
+    }
+
+    .carousel-item img {
+        min-height: 400px;
+    }
+}

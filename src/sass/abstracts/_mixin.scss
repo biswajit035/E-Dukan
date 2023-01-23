@@ -1,0 +1,13 @@
+@import './variable';
+@mixin tablet {
+    @media($mobile <= width <=$tablet) {
+        @content;
+
+    }
+}
+@mixin mobile {
+    @media(width <=$mobile) {
+        @content;
+
+    }
+}

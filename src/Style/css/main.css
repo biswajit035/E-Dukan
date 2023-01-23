@@ -1,0 +1,434 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+.navbar {
+  background-color: #2b6777;
+  height: 8vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2px 60px;
+  font-size: 17px;
+}
+@media (480px <= width <= 768px) {
+  .navbar {
+    padding: 0 25px;
+  }
+}
+@media (width <= 480px) {
+  .navbar {
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 10px;
+    padding-bottom: 5px;
+    height: auto;
+    gap: 5px;
+  }
+}
+.navbar .nav_details {
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  display: flex;
+}
+.navbar .nav_details .nav_logo {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+}
+@media (width <= 480px) {
+  .navbar .nav_details .nav_logo {
+    gap: 15px;
+  }
+}
+.navbar .nav_details .nav_logo .title {
+  font-size: 25px;
+  font-weight: bold;
+  color: white;
+}
+.navbar .nav_details .nav_logo img {
+  height: 7vh;
+  width: auto;
+}
+@media (width <= 480px) {
+  .navbar .nav_details .nav_logo img {
+    display: none;
+  }
+}
+.navbar .nav_details .nav_logo .hamburger {
+  display: none;
+  color: white;
+}
+@media (width <= 480px) {
+  .navbar .nav_details .nav_logo .hamburger {
+    display: initial;
+    font-size: 20px;
+  }
+}
+.navbar .ts {
+  gap: 60px;
+  position: absolute;
+  top: 15px;
+}
+@media (480px <= width <= 768px) {
+  .navbar .ts {
+    gap: 35px;
+    top: 15px;
+  }
+}
+@media (width <= 480px) {
+  .navbar .ts {
+    position: initial;
+  }
+}
+.navbar .ts .faSearch {
+  font-size: 15px;
+}
+.navbar .search {
+  width: 40vw;
+  background-color: white;
+  height: 4vh;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  padding: 0 10px;
+}
+@media (480px <= width <= 768px) {
+  .navbar .search {
+    width: 30vw;
+  }
+}
+@media (width <= 480px) {
+  .navbar .search {
+    top: 50px;
+    width: 91vw;
+  }
+}
+.navbar .search input[type=text] {
+  font-size: 16px;
+  outline: none;
+  border: none;
+  height: 80%;
+  width: 100%;
+  padding-left: 10px;
+}
+.navbar .nav_acc {
+  display: flex;
+  gap: 55px;
+  color: white;
+  align-items: center;
+}
+@media (480px <= width <= 768px) {
+  .navbar .nav_acc {
+    gap: 20px;
+  }
+}
+@media (width <= 480px) {
+  .navbar .nav_acc {
+    position: relative;
+    gap: 15px;
+  }
+}
+.navbar .nav_acc .profile {
+  display: flex;
+  gap: 5px;
+  cursor: pointer;
+  align-items: center;
+  color: white;
+  text-decoration: none;
+}
+.navbar .nav_acc .profile:hover {
+  color: yellow;
+}
+.navbar .nav_acc .profile .span {
+  text-decoration: none;
+  color: white;
+}
+@media (width <= 480px) {
+  .navbar .nav_acc .profile .span {
+    display: none;
+  }
+}
+
+.cata {
+  display: flex;
+  font-size: 20px;
+  padding: 5px 10px;
+  gap: 40px;
+  overflow-x: scroll;
+}
+.cata::-webkit-scrollbar {
+  display: none;
+}
+@media (width <= 480px) {
+  .cata {
+    padding: 8px 10px;
+    font-size: 25px;
+  }
+}
+
+@media (width >= 768px) {
+  .carousel .carousel-item {
+    height: 400px;
+  }
+  .carousel-item img {
+    min-height: 400px;
+  }
+}
+.omg .omg_logo {
+  top: 20px;
+  display: flex;
+  justify-content: center;
+}
+@media (width <= 480px) {
+  .omg .omg_logo img {
+    height: 40px;
+  }
+}
+.omg .omg_title {
+  display: flex;
+  justify-content: center;
+  font-size: 25px;
+  color: #3d2e8a;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+@media (width <= 480px) {
+  .omg .omg_title {
+    font-size: 12px;
+  }
+}
+.omg .omg_products {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  overflow-x: auto;
+  padding: 5px 10px;
+}
+.omg .omg_products::-webkit-scrollbar {
+  display: none;
+}
+.omg .omg_products .card {
+  min-width: 15vw;
+  border-radius: 10px;
+}
+.omg .omg_products .card img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: auto;
+  width: 50%;
+}
+@media (width <= 480px) {
+  .omg .omg_products .card {
+    min-width: 40vw;
+  }
+}
+@media (480px <= width <= 768px) {
+  .omg .omg_products .card {
+    min-width: 40vw;
+  }
+}
+.omg .omg_products .container {
+  padding: 2px 16px;
+}
+.omg .omg_products .container .dis {
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-size: 15px;
+  color: black;
+}
+@media (width <= 480px) {
+  .omg .omg_products .container .dis {
+    font-size: 12px;
+  }
+}
+@media (480px <= width <= 768px) {
+  .omg .omg_products .container .dis {
+    font-size: 12px;
+  }
+}
+.omg .omg_products .container .price {
+  padding: 2px 5px;
+  font-weight: 600;
+}
+.omg .all-pro {
+  padding: 5px 20px;
+  font-size: 13px;
+  color: #077588;
+  font-weight: 500;
+}
+
+.food-main .food_title {
+  display: flex;
+  justify-content: center;
+  font-size: 25px;
+  padding-top: 10px;
+  font-weight: bold;
+}
+@media (width <= 480px) {
+  .food-main .food_title {
+    font-size: 18px;
+  }
+}
+.food-main .food_products {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  overflow-x: auto;
+  padding: 5px 10px;
+}
+.food-main .food_products::-webkit-scrollbar {
+  display: none;
+}
+.food-main .food_products .card {
+  min-width: 15vw;
+  border-radius: 10px;
+  border-style: none;
+}
+.food-main .food_products .card img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: auto;
+  width: 50%;
+}
+@media (width <= 480px) {
+  .food-main .food_products .card {
+    min-width: 40vw;
+  }
+}
+@media (480px <= width <= 768px) {
+  .food-main .food_products .card {
+    min-width: 40vw;
+  }
+}
+.food-main .food_products .container {
+  padding: 2px 16px;
+  font-size: 15px;
+  text-align: center;
+}
+.food-main .food_products .container .dis {
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-size: 15px;
+  font-weight: bold;
+  color: rgb(34, 160, 83);
+}
+@media (width <= 480px) {
+  .food-main .food_products .container .dis {
+    font-size: 12px;
+  }
+}
+@media (480px <= width <= 768px) {
+  .food-main .food_products .container .dis {
+    font-size: 12px;
+  }
+}
+.food-main .food_products .container .price {
+  padding: 2px 5px;
+  font-weight: 600;
+}
+
+.auth {
+  display: flex;
+  height: 100vh;
+  width: 100vw;
+  justify-content: center;
+  align-items: center;
+}
+@media (width <= 480px) {
+  .auth {
+    height: 92vh;
+  }
+}
+.auth .container {
+  width: 35vw;
+  height: -webkit-max-content;
+  height: -moz-max-content;
+  height: max-content;
+  border-radius: 10px;
+  box-shadow: 4px 5px 17px 0px rgba(0, 0, 0, 0.75);
+}
+@media (width <= 480px) {
+  .auth .container {
+    width: 80vw;
+    height: 80vh;
+  }
+}
+@media (480px <= width <= 768px) {
+  .auth .container {
+    width: 75vw;
+    height: 85vh;
+  }
+}
+
+.login, .signup {
+  color: #5a5d5a;
+  padding: 10px 20px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.login h1, .signup h1 {
+  padding: 5px 10px;
+  display: flex;
+  justify-content: center;
+  font-weight: bold;
+}
+.login form, .signup form {
+  display: flex;
+  flex-direction: column;
+  padding-top: 30px;
+}
+.login form label, .signup form label {
+  font-weight: bold;
+}
+.login form input[type=email], .login form input[type=password], .login form input[type=text], .signup form input[type=email], .signup form input[type=password], .signup form input[type=text] {
+  border: none;
+  padding-top: 5px;
+  outline: none;
+  border-bottom: 2px solid white;
+}
+.login form input[type=email]:focus, .login form input[type=password]:focus, .login form input[type=text]:focus, .signup form input[type=email]:focus, .signup form input[type=password]:focus, .signup form input[type=text]:focus {
+  border-bottom: 2px solid grey;
+}
+.login form button, .signup form button {
+  border: none;
+  border-radius: 10px;
+  background-color: #5a5d5a;
+  color: white;
+  font-weight: bold;
+  padding: 10px 55px;
+  font-size: 18px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 40px;
+}
+.login form button:hover, .signup form button:hover {
+  background-color: rgb(72, 72, 72);
+}
+@media (width <= 480px) {
+  .login form button, .signup form button {
+    width: 30vw;
+    padding: 5px;
+  }
+}
+.login .createacc, .signup .createacc {
+  color: rgb(107, 107, 255);
+  text-decoration: none;
+  font-weight: bold;
+  margin-top: auto;
+  text-align: center;
+}
+.login .createacc:hover, .signup .createacc:hover {
+  text-decoration: underline;
+}
+@media (width <= 480px) {
+  .login .createacc:hover, .signup .createacc:hover {
+    text-decoration: none;
+  }
+}/*# sourceMappingURL=main.css.map */
