@@ -26,6 +26,7 @@
 
     .omg_products {
         display: flex;
+        justify-content: center;
         gap: 10px;
         overflow-x: auto;
         padding: 5px 10px;
@@ -67,12 +68,11 @@
             padding: 2px 16px;
 
             .dis {
-                background-color: red;
                 padding: 5px 10px;
                 border-radius: 5px;
                 font-size: 15px;
-                font-weight: bold;
-                color: white;
+                // font-weight: bold;
+                color: black;
 
                 @include mobile{
                     font-size: 12px;

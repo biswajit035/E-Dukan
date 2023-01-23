@@ -27,7 +27,7 @@ const Navbar = () => {
           </div>
           <div className="profile">
             <FontAwesomeIcon icon={faCartShopping} />
-            <span >User</span>
+            <span >Cart</span>
           </div>
         </div>
       </div>
