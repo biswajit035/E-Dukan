@@ -10,7 +10,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 2px 60px;
+  padding: 2px 15px 2px 60px;
   font-size: 17px;
 }
 @media (480px <= width <= 768px) {
@@ -72,6 +72,7 @@
   gap: 60px;
   position: absolute;
   top: 15px;
+  left: 25vw;
 }
 @media (480px <= width <= 768px) {
   .navbar .ts {
@@ -431,4 +432,4 @@
   .login .createacc:hover, .signup .createacc:hover {
     text-decoration: none;
   }
-}/*# sourceMappingURL=main.css.map */
+}

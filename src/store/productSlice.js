@@ -1,10 +1,7 @@
-import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
+import { createAsyncThunk, createSlice, isAnyOf } from "@reduxjs/toolkit";
+import { STATUSES } from "./buyersSlice";
 
-export const STATUSES = Object.freeze({
-    IDLE: "idle",
-    ERROR: "error",
-    LOADING: "loading",
-})
+
 
 
 export const fetchProducts = createAsyncThunk('products/fetch', async (props) => {
@@ -12,25 +9,23 @@ export const fetchProducts = createAsyncThunk('products/fetch', async (props) =>
     const data = await res.json();
     return data;
 });
-
-
 const productSlice = createSlice({
     name: 'product',
     initialState:{
         data:[],
         status: STATUSES.IDLE
     },
-    reducers:{},
     extraReducers: (builder)=>{
         builder
+            
             .addCase(fetchProducts.pending,(state,action)=>{
                 state.status = STATUSES.LOADING
             })
             .addCase(fetchProducts.fulfilled,(state,action)=>{
                 state.data = action.payload;
                 state.status = STATUSES.IDLE;
-
             })
+            
             .addCase(fetchProducts.rejected,(state,action)=>{
                 state.status = STATUSES.ERROR
             })

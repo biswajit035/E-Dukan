@@ -1,0 +1,30 @@
+.admin-dash{
+    .left{
+        height: 100vh;
+        width: 15vw;
+        padding-left: 10px;
+        background-color: yellow;
+        button {
+                border: none;
+                border-radius: 10px;
+                background-color: #5a5d5a;
+                color: white;
+                font-weight: bold;
+                padding: 10px 55px;
+                font-size: 18px;
+                margin-left: auto;
+                margin-right: auto;
+                margin-top: 40px;
+        
+                &:hover {
+                    background-color: rgb(72, 72, 72);
+                }
+        
+        
+                @include mobile {
+                    width: 30vw;
+                    padding: 5px;
+                }
+            }
+    }
+}
