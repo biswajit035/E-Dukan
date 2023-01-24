@@ -3,8 +3,9 @@ import Image from '../Assets/omg-deal.jpg';
 import Image2 from '../Assets/best-deals/phone1.jpg';
 import { useState, useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { fetchProducts, STATUSES } from '../store/productSlice';
+import { fetchProducts } from '../store/productSlice';
 import { MagnifyingGlass } from 'react-loader-spinner'
+import { STATUSES } from '../store/buyersSlice';
 
 export const Omg = (props) => {
     const dispatch = useDispatch();
@@ -37,16 +38,16 @@ export const Omg = (props) => {
                         width="80"
                         ariaLabel="MagnifyingGlass-loading"
                         wrapperStyle={{}}
-                        wrapperClass="MagnifyingGlass-wrapper"
+                        wrapperclassName="MagnifyingGlass-wrapper"
                         glassColor='#c0efff'
                         color='#e15b64'
                     />
                 :
-                    users.map((currEle) => {
+                    users.map((currEle,idx) => {
                         return (
-                            <div className="card">
+                            <div className="card" key={idx}>
                                 <img src={currEle.image} alt="" /><br />
-                                <div class="container">
+                                <div className="container">
                                     <span className='dis'>Up to 29% off</span>
                                     <div className='price'>₹{currEle.price}</div>
                                 </div>

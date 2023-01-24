@@ -16,8 +16,13 @@ connectToMongo();
 const Items = require('./models/BestDeals')
 
 
+// import bestDeals from './Routes/BestDeals';
+
+
+
 //available routes
-app.use('/api/bestdeals', require('./Routes/BestDeals'))
+// app.use('/api/bestdeals', bestDeals)
+app.use('/api/auth', require('./Routes/Auth'))
 // app.use(uploadFile({useTempFiles:true}))
 
 
