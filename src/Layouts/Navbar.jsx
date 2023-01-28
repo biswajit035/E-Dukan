@@ -47,7 +47,6 @@ const Navbar = () => {
   }, [])
 
   
-  console.log(data);
 
   
 

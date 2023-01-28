@@ -7,6 +7,7 @@ import { Catagory } from '../Layouts/Catagory'
 import { Banner } from '../Layouts/Banner'
 import { Omg } from '../Layouts/Omg'
 import Foods from '../Layouts/Foods'
+import Card from '../components/Card'
 // import '@fortawesome/fontawesome-svg-core/styles.css';
 
 
@@ -20,9 +21,8 @@ const Home = () => {
       <Banner/>
       <Omg link='https://fakestoreapi.com/products' />
       <Foods title="Buy Foods, Toys and More" link='https://fakestoreapi.com/products' />
-      <Foods title="Electronics and electrical" link='https://fakestoreapi.com/products' />
-      <Foods title="Grocery and more " link='https://fakestoreapi.com/products' />
-
+      <Foods title="Buy Foods, Toys and More" link='https://fakestoreapi.com/products' />
+      <Foods title="Buy Foods, Toys and More" link='https://fakestoreapi.com/products' />
     </div>
   )
 }

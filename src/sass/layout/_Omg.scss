@@ -24,48 +24,48 @@
         }
     }
 
-    .omg_products {
-        display: flex;
-        justify-content: center;
-        gap: 10px;
-        overflow-x: auto;
-        padding: 5px 10px;
-        // width: 100%;
+    .product_slider{
+    //     display: flex;
+    //     gap: 10px;
+    //     overflow-x: auto;
+    //     padding: 5px 10px;
+    //     // width: 100%;
 
-        &::-webkit-scrollbar {
-            display: none;
-        }
+    //     &::-webkit-scrollbar {
+    //         display: none;
+    //     }
 
-        .card {
-            min-width: 15vw;
-            border-radius: 10px;
+        // .card {
+    //         min-width: 15vw;
+    //         border-radius: 10px;
+    //         cursor: pointer;
 
-            img {
-                // width: 200px;
-                // height: 200px;
-                // padding: 10px;
-                display: block;
-                margin-left: auto;
-                margin-right: auto;
-                margin-top: auto;
-                width: 50%;
-            }
+    //         img {
+    //             // width: 200px;
+    //             // height: 200px;
+    //             // padding: 10px;
+    //             display: block;
+    //             margin-left: auto;
+    //             margin-right: auto;
+    //             margin-top: auto;
+    //             width: 50%;
+    //         }
 
-            @include mobile {
-                min-width: 40vw;
-            }
-
-
-            @include tablet{
-                min-width: 40vw;
-            }
+    //         @include mobile {
+    //             min-width: 40vw;
+    //         }
 
 
+    //         @include tablet{
+    //             min-width: 40vw;
+    //         }
 
-        }
+
+
+        // }
 
         .container {
-            padding: 2px 16px;
+    //         padding: 2px 16px;
 
             .dis {
                 padding: 5px 10px;

@@ -6,6 +6,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { fetchProducts } from '../store/productSlice';
 import { MagnifyingGlass } from 'react-loader-spinner'
 import { STATUSES } from '../store/buyersSlice';
+import Card from '../components/Card';
 
 export const Omg = (props) => {
     const dispatch = useDispatch();
@@ -30,7 +31,7 @@ export const Omg = (props) => {
             </div>
             <span className='omg_title'>Lowest Prices On The Best Brands</span>
 
-            <div className="omg_products">
+            <div className="product_slider">
                 {status === STATUSES.LOADING ?
                     <MagnifyingGlass
                         visible={true}
@@ -42,20 +43,14 @@ export const Omg = (props) => {
                         glassColor='#c0efff'
                         color='#e15b64'
                     />
-                :
-                    users.map((currEle,idx) => {
+                    :
+                    users.map((itm, idx) => {
                         return (
-                            <div className="card" key={idx}>
-                                <img src={currEle.image} alt="" /><br />
-                                <div className="container">
-                                    <span className='dis'>Up to 29% off</span>
-                                    <div className='price'>₹{currEle.price}</div>
-                                </div>
-                            </div>
+
+                            <Card img={itm.image} title={itm.title} price={itm.price} />
                         )
 
                     })
-                    
                 }
             </div>
             <div className="all-pro">See All Product</div>
