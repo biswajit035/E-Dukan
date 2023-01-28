@@ -7,6 +7,7 @@ import { Catagory } from '../Layouts/Catagory'
 import { Banner } from '../Layouts/Banner'
 import { Omg } from '../Layouts/Omg'
 import Foods from '../Layouts/Foods'
+import Card from '../components/Card'
 // import '@fortawesome/fontawesome-svg-core/styles.css';
 import Product from '../Layouts/Product'
 

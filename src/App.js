@@ -9,6 +9,7 @@ import { useSelector } from "react-redux";
 import { useEffect } from "react";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import Test from "./Pages/Test";
 
 
 
@@ -47,6 +48,7 @@ function App() {
           <Route index element={<SignUp title="Create Admin Account" />} />
         </Route>
         <Route path="admin-dashboard" element={<AdminDashboard />} />
+        <Route path="test" element={<Test />} />
         <Route path="*" element={<Error />} />
 
       </Routes>

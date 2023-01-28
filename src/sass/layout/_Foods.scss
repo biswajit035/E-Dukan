@@ -13,77 +13,20 @@
             font-size: 18px;
         }
     }
-
-    .food_products {
-        display: flex;
-        // justify-content: center;
-        gap: 10px;
-        overflow-x: auto;
-        padding: 5px 10px;
-        // width: 100%;
-
-
-        &::-webkit-scrollbar {
-            display: none;
-        }
-
-        .card {
-            min-width: 15vw;
-            border-radius: 10px;
-            border-style: none;
+        
+}
+.product_slider {
+    display: flex;
+    align-items: stretch;
+    gap: 10px;
+    overflow-x: auto;
+    padding: 5px 10px;
+    // width: 100%;
 
 
-            img {
-                // width: 200px;
-                // height: 200px;
-                // padding: 10px;
-                display: block;
-                margin-left: auto;
-                margin-right: auto;
-                margin-top: auto;
-                width: 50%;
-            }
-
-            @include mobile {
-                min-width: 40vw;
-            }
-
-
-            @include tablet {
-                min-width: 40vw;
-            }
-
-
-
-        }
-
-        .container {
-            padding: 2px 16px;
-            font-size: 15px;
-            text-align: center;
-
-            .dis {
-                // background-color: red;
-                padding: 5px 10px;
-                border-radius: 5px;
-                font-size: 15px;
-                font-weight: bold;
-                color: rgb(34, 160, 83);
-
-                @include mobile {
-                    font-size: 12px;
-                }
-
-                @include tablet {
-                    font-size: 12px;
-                }
-            }
-
-            .price {
-                padding: 2px 5px;
-                font-weight: 600;
-            }
-        }
+    &::-webkit-scrollbar {
+        display: none;
     }
 
 }
+
