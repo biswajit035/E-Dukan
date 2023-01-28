@@ -1,9 +1,16 @@
 import React from 'react'
+import { useNavigate, useNavigation } from 'react-router';
 import "../Style/css/main.css";
 
 const Card = ({img, title, price}) => {
+let navigate = useNavigate()
+
+const handleClick = () =>{
+    navigate ("product/12345")
+}
+
     return (
-        <div className="card">
+        <div className="card" onClick={handleClick}>
             <div className="img_container">
                 <img src={img} alt="" />
             </div>
