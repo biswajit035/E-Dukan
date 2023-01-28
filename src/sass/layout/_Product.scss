@@ -1,0 +1,134 @@
+@import '../abstracts/mixin';
+
+.product_main {
+    padding: 10px 10px;
+
+    .page_title {
+        display: flex;
+        justify-content: center;
+        font-size: 25px;
+        font-weight: 650;
+        padding-bottom: 40px;
+
+        
+    }
+
+    .product_det {
+        display: flex;
+        @include mobile{
+            display: flex;
+            flex-direction: column;
+        }
+        @include tablet{
+            display: flex;
+            flex-direction: column;
+        }
+        .product_img {
+            display: flex;
+            justify-content: center;
+            // background-color: red;
+            width: 40vw;
+
+            @include mobile{
+                width: 100vw;
+                justify-content: center;
+            }
+            @include tablet{
+                width: 100vw;
+                justify-content: center;
+            }
+            
+            img {
+                width: 30vw;
+                @include mobile{
+                    width: 60vw;
+                }
+                // @include tablet{
+                //     width: 50vw;
+                //     height: auto;
+                // }
+
+            }
+        }
+        .det{
+            width: 70vw;
+            // background-color: red;
+            // text-align: center;
+            padding: 10px 50px;
+            @include mobile{
+                width: 100vw;
+            }
+            @include tablet{
+                width: 100vw;
+            }
+
+            .product_title, .product_price{
+                padding: 20px 0px;
+                font-size: 25px;
+                font-weight: 650;
+            }
+            .add_product{
+                display: flex;
+                gap: 30px;
+                padding-bottom: 30px;
+
+                @include mobile{
+                    flex-direction: column;
+                }
+
+                .add_to_cart{
+                    width: 15vw;
+                    // background-color: red;
+                    @include mobile{
+                        width: 80vw;
+                        background-color: red;
+                    }
+                    .add{
+                        width: 15vw;
+                        height: 6vh;
+                        background-color: #f55000;
+                        color: white;
+                        font-size: 18px;
+                        font-weight: 600;
+                        border: none;
+
+                        @include mobile{
+                            width: 80vw;
+                        }
+                    }
+                }
+                .buy_now{
+                    width: 15vw;
+                    // background-color: red;
+                    .buy{
+                        width: 15vw;
+                        height: 6vh;
+                        background-color: #f55000;
+                        color: white;
+                        font-size: 18px;
+                        font-weight: 600;
+                        border: none;
+
+                        @include mobile{
+                            width: 80vw;
+                        }
+                    }
+                }
+            }
+            .product_details{
+                .heading{
+                    font-size: 20px;
+                    font-weight: 650;
+                    color: #f55000;
+                }
+            }
+            .product_description{
+                .des_heading{
+                    font-size: 20px;
+                    font-weight: 650;
+                    color: #f55000;
+                }
+            }
+        }
+    }
+}

@@ -1,3 +1,5 @@
+@import '../abstracts/mixin';
+
 .food-main {
     .food_title {
         // background-color: red;
@@ -14,7 +16,7 @@
 
     .food_products {
         display: flex;
-            justify-content: center;
+        // justify-content: center;
         gap: 10px;
         overflow-x: auto;
         padding: 5px 10px;

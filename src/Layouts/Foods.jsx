@@ -48,7 +48,6 @@ const Foods = (props) => {
                     })
                 }
             </div>
-
         </div>
     )
 }
