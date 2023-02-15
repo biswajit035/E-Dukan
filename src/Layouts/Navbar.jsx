@@ -7,7 +7,7 @@ import { faUser } from '@fortawesome/free-solid-svg-icons';
 import { faCartShopping } from '@fortawesome/free-solid-svg-icons';
 import { faPowerOff } from '@fortawesome/free-solid-svg-icons';
 import { faBars } from '@fortawesome/free-solid-svg-icons';
-import { Link } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
@@ -17,9 +17,11 @@ import { fetchUser } from '../store/userSlice';
 
 
 
-const Navbar = () => {
+const Navbar = ({ page }) => {
 
-    const dispatch = useDispatch()
+  const dispatch = useDispatch()
+
+
 
 
   // const { data, status } = useSelector((state) => state.buyer);
@@ -31,7 +33,7 @@ const Navbar = () => {
   })
 
 
-  const handleLogout = () =>{
+  const handleLogout = () => {
     localStorage.removeItem('token');
     localStorage.removeItem('fname');
     localStorage.removeItem('lname');
@@ -40,54 +42,52 @@ const Navbar = () => {
   }
 
   useEffect(() => {
-    if(localStorage.getItem('token'))
+    if (localStorage.getItem('token'))
       dispatch(fetchUser(localStorage.getItem('token')))
-    if(data.fname) setUser(data)
+    if (data.fname) setUser(data)
     // console.log("navbar logged");
   }, [])
 
-  
 
-  
+
+
 
   return (
     <div className='navbar'>
-      
-      <div className="nav_details">
-        <div className="nav_logo">
-          {
-            data.isAdmin ?
+
+      <div className="nav_logo">
+        {
+          data.isAdmin ?
             <span >Admin</span>
             :
-             <img src={logo} alt="sastastore logo" /> 
-          }
-          <FontAwesomeIcon icon={faBars} className='hamburger'/>
-          <div className="title">SastaStore</div>
-        </div>
-        <div className="nav_acc">
-          <Link to="/auth" className="profile">
-            <FontAwesomeIcon icon={faUser} />
-            <span className="text">{ data.fname ? data.fname : "User"}</span>
-          </Link>
-          <div className="profile">
-            Seller
-          </div>
-          <div className="profile">
-            <FontAwesomeIcon icon={faCartShopping} />
-            <span >Cart</span>
-          </div>
-          { localStorage.getItem('token') ? <div className="profile" onClick={handleLogout}>
-            <FontAwesomeIcon icon={faPowerOff} />
-          </div> : ""}
-        </div>
+            <img src={logo} alt="sastastore logo" />
+        }
+        <FontAwesomeIcon icon={faBars} className='hamburger' />
+        <Link to="/" className="title">SastaStore</Link>
+      </div>
+      <div className="nav_acc">
+        {page === "cart" || page === "seller" ? "" : <Link to="cart" className="profile">
+          <FontAwesomeIcon icon={faCartShopping} />
+          <span >Cart</span>
+        </Link>}
+        {page === "cart" || page === "seller" ? "" : <Link to="seller" className="profile">
+          Seller
+        </Link>}
+        <Link to="/auth" className="profile">
+          <FontAwesomeIcon icon={faUser} />
+          <span className="text">{data.fname ? data.fname : "User"}</span>
+        </Link>
+        {localStorage.getItem('token') ? <div className="profile" onClick={handleLogout}>
+          <FontAwesomeIcon icon={faPowerOff} />
+        </div> : ""}
+        {page === "seller" && <button className='additem'>Add Product</button>}
+      </div>
+      <div className="search">
+        <FontAwesomeIcon icon={faSearch} className='faSearch'></FontAwesomeIcon>
+        <input type="text" name="" id="" />
       </div>
 
-      <div className="ts">
-        <div className="search">
-          <FontAwesomeIcon icon={faSearch} className='faSearch'></FontAwesomeIcon>
-          <input type="text" name="" id="" />
-        </div>
-      </div>
+
 
     </div>
   )

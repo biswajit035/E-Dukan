@@ -15,7 +15,7 @@ const Product = (props) => {
                         <img src={props.image} alt="" />
                     </div>
                     <div className="det">
-                        <div className="product_title">{props.title}</div>
+                        <div className="product_title" >{props.title}</div>
                         <div className="product_price">₹{props.price}</div>
                         <div className="add_product">
                             <div className="add_to_cart">

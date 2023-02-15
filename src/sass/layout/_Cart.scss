@@ -1,0 +1,74 @@
+@import '../abstracts/mixin';
+
+
+.cart_main {
+    .navbar {
+        .nav_logo {
+            img {
+                display: none;
+            }
+        }
+
+        .search {
+            display: none;
+        }
+
+    }
+
+    .cart_product {
+        padding: 10px 10px;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+
+        .seller_main {
+            display: flex;
+
+            .seller_catagory {
+                width: 20%;
+                min-height: 100vh;
+                // background-color: red;
+                padding: 30px 50px;
+                display: flex;
+                flex-direction: column;
+                gap: 40px;
+
+                .active {
+                    background-color: red;
+                }
+
+                .typ-cata {
+                    border: 1px solid grey;
+                    padding: 10px 10px;
+                    border-radius: 10px;
+                    display: flex;
+                    justify-content: center;
+                    // align-self: center;
+                    cursor: pointer;
+                    // background-color: white;
+
+
+
+                    &:hover {
+                        box-shadow: 7px 7px 33px -9px rgba(0, 0, 0, 0.75);
+                    }
+                }
+            }
+
+            .seller_product {
+                width: 80%;
+                min-height: 100vh;
+                padding: 30px 10px;
+                // background-color: yellow;
+                border: 1px solid red;
+                display: flex;
+                // justify-content: center;
+                flex-direction: column;
+                gap: 20px;
+
+
+
+            }
+        }
+    }
+}

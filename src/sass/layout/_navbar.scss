@@ -9,150 +9,255 @@
 
 
 
+// .navbar {
+//     background-color: #2b6777;
+//     height: 8vh;
+//     display: flex;
+//     flex-direction: column;
+//     align-items: center;
+//     justify-content: center;
+//     padding: 2px 15px 2px 60px;
+//     font-size: 17px;
+
+//     @include tablet {
+//         padding: 0 25px;
+//         // height: auto;
+//     }
+
+//     @include mobile {
+//         padding-left: 10px;
+//         padding-right: 10px;
+//         padding-top: 10px;
+//         padding-bottom: 5px;
+//         height: auto;
+//         gap: 5px;
+//     }
+
+//     .nav_details{
+//         width: 100%;
+//         justify-content: space-between;
+//         align-items: center;
+//         display: flex;
+
+//         .nav_logo {
+//                 display: flex;
+//                 align-items: center;
+//                 gap: 25px;
+
+//                 @include mobile{
+//                     gap: 15px;
+//                 }
+
+//                 .title {
+//                     font-size: 25px;
+//                     font-weight: bold;
+//                     color: white;
+//                 }
+
+//                 img {
+//                     height: 7vh;
+//                     width: auto;
+
+//                     @include mobile{
+//                         display: none;
+//                     }
+//                 }
+
+//                 
+//             }
+//     }
+
+
+
+
+//     .ts {
+//         // display: flex;
+//         // align-items: center;
+//             // display: none;
+//         gap: 60px;
+//         position: absolute;
+//         top: 15px;
+//         left: 25vw;
+
+//         @include tablet {
+//             gap: 35px;
+//             top: 15px;
+//         }
+
+//         @include mobile {
+//             position: initial;
+//         }
+
+
+
+
+//         .faSearch {
+//             font-size: 15px;
+//         }
+
+//     }
+
+//     .search {
+//         
+//         @include tablet {
+//             width: 30vw;
+//         }
+
+//         @include mobile {
+//             // position: absolute;
+//             top: 50px;
+//             width: 91vw;
+//         }
+
+//         input[type=text] {
+//             // background-color: aqua;
+//             font-size: 16px;
+//             outline: none;
+//             border: none;
+//             height: 80%;
+//             width: 100%;
+//             padding-left: 10px;
+//         }
+//     }
+
+
+//     .nav_acc {
+//         display: flex;
+//         gap: 55px;
+//         color: white;
+//         // justify-content: center;
+//         align-items: center;
+
+
+//         @include tablet {
+//             gap: 20px;
+//         }
+
+//         @include mobile {
+//             position: relative;
+//             gap: 15px;
+//         }
+
+
+//         .profile {
+//             
+//         }
+//     }
+// }
+
 .navbar {
+    display: grid;
+    // grid-template-rows: 100px;
+    grid-template-columns: 0.2fr 1fr 2fr 1fr 0.2fr;
     background-color: #2b6777;
-    height: 8vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding: 2px 15px 2px 60px;
-    font-size: 17px;
+    // height: 64px;
+    grid-template-rows: 64px;
+    padding: 0;
 
-    @include tablet {
-        padding: 0 25px;
-        // height: auto;
+    @include mobile{
+        grid-template-rows: 44px 25px;
+        padding-bottom: 10px;
     }
 
-    @include mobile {
-        padding-left: 10px;
-        padding-right: 10px;
-        padding-top: 10px;
-        padding-bottom: 5px;
-        height: auto;
-        gap: 5px;
-    }
 
-    .nav_details{
-        width: 100%;
-        justify-content: space-between;
-        align-items: center;
+    .nav_logo {
+        // display: grid;
+        grid-column: 2/3;
+        grid-row: 1;
         display: flex;
+        gap: 25px;
+        color: white;
+        align-items: center;
+        height: 100%;
 
-        .nav_logo {
-                display: flex;
-                align-items: center;
-                gap: 25px;
+        @include tablet{
+            gap: 10px;
+        }
 
-                @include mobile{
-                    gap: 15px;
-                }
-        
-                .title {
-                    font-size: 25px;
-                    font-weight: bold;
-                    color: white;
-                }
-        
-                img {
-                    height: 7vh;
-                    width: auto;
 
-                    @include mobile{
-                        display: none;
-                    }
-                }
+        img {
+            height: 80%;
+            width: auto;
 
-                .hamburger{
-                    display: none;
-                    color: white;
-
-                    @include mobile{
-                        display: initial;
-                        font-size: 20px;
-                    }
-                }
+            @include mobile {
+                display: none;
             }
-    }
-
-    
-
-
-    .ts {
-        // display: flex;
-        // align-items: center;
-            // display: none;
-        gap: 60px;
-        position: absolute;
-        top: 15px;
-        left: 25vw;
-
-        @include tablet {
-            gap: 35px;
-            top: 15px;
         }
 
-        @include mobile {
-            position: initial;
+        .hamburger {
+            display: none;
+            color: white;
+
+            @include mobile {
+                display: initial;
+                font-size: 20px;
+                padding-left: 10px ;
+                
+            }
         }
 
 
 
-
-        .faSearch {
-            font-size: 15px;
+        .title {
+            font-size: 30px;
+            font-weight: bold;
+            color: white;
         }
 
     }
 
     .search {
-        width: 40vw;
+        // display: grid;
+        grid-column: 3/4;
+        grid-row: 1;
         background-color: white;
-        height: 4vh;
+        height: 50%;
         border-radius: 5px;
         display: flex;
         align-items: center;
-        padding: 0 10px;
 
-        @include tablet {
-            width: 30vw;
+        @include mobile{
+            grid-column: -5/-2;
+            grid-row: 2/3;
+            height: 130%;
         }
 
-        @include mobile {
-            // position: absolute;
-            top: 50px;
-            width: 91vw;
+        @include tablet{
+            width: 90%;
+            margin: 0px auto;
+        }
+        
+
+        .faSearch {
+            padding: 0px 10px;
         }
 
-        input[type=text] {
-            // background-color: aqua;
-            font-size: 16px;
-            outline: none;
-            border: none;
-            height: 80%;
+        input[type="text"] {
+            height: 100%;
             width: 100%;
-            padding-left: 10px;
+            border: none;
+            outline: none;
+            font-size: 18px;
+            border-radius: 5px;
         }
     }
 
-
     .nav_acc {
+        // display: grid;
+        grid-column: 4/5;
+        grid-row: 1;
         display: flex;
-        gap: 55px;
-        color: white;
-        // justify-content: center;
-        align-items: center;
+        justify-content: space-between;
+        padding-left: 40px;
 
-
-        @include tablet {
-            gap: 20px;
+        @include mobile{
+            display: none;
         }
 
-        @include mobile {
-            position: relative;
-            gap: 15px;
+        @include tablet{
+            // padding-left: 0;
+            padding: 0px 10px;
         }
-
 
         .profile {
             display: flex;
@@ -162,20 +267,27 @@
             color: white;
             text-decoration: none;
 
-            
 
-            &:hover{
+
+            &:hover {
                 color: yellow;
             }
 
-            .span{
+            span {
                 text-decoration: none;
                 color: white;
-                @include mobile{
+
+                @include mobile {
+                    display: none;
+                }
+                @include tablet{
                     display: none;
                 }
             }
 
         }
     }
+
+
+
 }

@@ -11,6 +11,8 @@ import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import Test from "./Pages/Test";
 import Product from "./Pages/Product";
+import Seller from "./Pages/Seller";
+import Cart from "./Pages/Cart";
 
 
 
@@ -50,10 +52,17 @@ function App() {
         </Route>
         <Route path="admin-dashboard" element={<AdminDashboard />} />
         <Route path="test" element={<Test />} />
-        <Route path="product/:id" element={<Product
+        <Route path="product" element={<Product
+          image="https://cdn.shopify.com/s/files/1/0263/2912/0813/products/p8.jpg"
+          title="Buckle Wrap Skirt"
+          price="1999" />} >
+        <Route path=":id" element={<Product
           image="https://cdn.shopify.com/s/files/1/0263/2912/0813/products/p8.jpg"
           title="Buckle Wrap Skirt"
           price="1999" />} />
+        </Route>
+        <Route path="seller/*" element={<Seller/>}/>
+        <Route path="cart" element={<Cart/>}/>
         <Route path="*" element={<Error />} />
 
       </Routes>
