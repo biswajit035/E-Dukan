@@ -2,6 +2,7 @@ const bcrypt = require('bcrypt')
 const jwt = require('jsonwebtoken')
 const dotenv = require('dotenv')
 const Buyers = require('../models/Buyer');
+const Users = require('../models/Users')
 const { verifyUser } = require('./verify');
 const JWT_SECRET_KEY = process.env.JWT_SECRET_KEY
 
@@ -46,7 +47,8 @@ async function signup(req, res) {
 
 
 async function login(req, res) {
-    const { email, password } = req.body;
+    console.log("hellow");
+    const { email } = req.body;
     try {
         const fu = await Buyers.findOne({ email })
         if (!fu) {
@@ -55,28 +57,39 @@ async function login(req, res) {
                 "msg": "User does not exists"
             });
         }
-        const compPass = bcrypt.compareSync(password, fu.password);
-        if (!compPass) {
-            return res.status(401).send({
+        // const compPass = bcrypt.compareSync(password, fu.password);
+        // if (!compPass) {
+        //     return res.status(401).send({
+        //         "status": "warn",
+        //         "msg": "Please try to login with correct credentials"
+        //     });
+        // }
+        // const payload = {
+        //     ID: {
+        //         id: fu.id
+        //     }
+        // }
+        // // console.log("logging from signin:"+payload.ID.id);
+
+        // var token = jwt.sign(payload, JWT_SECRET_KEY);
+        // res.status(200).send({
+        //     "status": "success",
+        //     "msg": "you have success fully logged in",
+        //     fu,
+        //     token
+        // })
+        const OTP = Math.floor(100000+Math.random()*900000)
+        const existsEmail = await Users.findOne({ email })
+        if (!fu) {
+            return res.status(409).send({
                 "status": "warn",
-                "msg": "Please try to login with correct credentials"
+                "msg": "User does not exists"
             });
         }
-        const payload = {
-            ID: {
-                id: fu.id
-            }
-        }
-        // console.log("logging from signin:"+payload.ID.id);
-
-        var token = jwt.sign(payload, JWT_SECRET_KEY);
-        res.status(200).send({
+        res .send({
             "status": "success",
-            "msg": "you have success fully logged in",
-            fu,
-            token
-        })
-        // res.send(fu.password)
+            "msg": "User do exists"
+        });
     } catch (error) {
         res.status(500).send({ error })
     }
